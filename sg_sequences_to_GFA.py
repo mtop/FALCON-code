@@ -58,7 +58,18 @@ for v, w in G_asm.sg_edges:
             "ol:i:%d" % overlap_length, "oi:f:%.1f" % overlap_idt,
             "ci:A:%s-%s" % ctg_id]  ) )
 
-f = FastaReader("../1-preads_ovl/db2falcon/preads4falcon.fasta")
+#f = FastaReader("../1-preads_ovl/db2falcon/preads4falcon.fasta")
+
+try:
+	# Works with v1.7.5
+	f = FastaReader("../1-preads_ovl/db2falcon/preads4falcon.fasta")
+except:
+	try:
+		# Works with v1.8.2
+		f = FastaReader("../1-preads_ovl/preads4falcon.fasta")
+	except:
+		print "Bummer, this code does not work with your version of FALCON."
+
 seq_len = {}
 my_seq = {}
 for r in f:
