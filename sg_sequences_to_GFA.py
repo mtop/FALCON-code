@@ -1,5 +1,6 @@
 #!/usr/local/packages/anaconda2/bin/python
 ## This is the `sg_edges_to_GFA.py` script
+## (More) information at https://github.com/PacificBiosciences/FALCON/wiki/Convert-FALCON-assembly-graph-to-GFA-format
 
 from falcon_kit.fc_asm_graph import AsmGraph
 from falcon_kit.FastaReader import FastaReader
